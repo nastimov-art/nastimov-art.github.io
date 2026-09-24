@@ -454,7 +454,3 @@ ul, ol { list-style: none; }
   .carousel__track { grid-auto-columns: calc((100% - var(--gap)) / 2.2); }
   .slide--wide .card { min-height: 0; }
 }
-
-/* Логотип в меню. Для тёмной темы отдельный файл с белыми буквами (через <picture>) */
-.nav__logo { display: block; line-height: 0; }
-.nav__logo img { height: 28px; width: auto; }
