@@ -126,7 +126,7 @@ ul, ol { list-style: none; }
 }
 .hero__name { font-size: clamp(19px, 2vw, 24px); font-weight: 600; letter-spacing: -0.015em; }
 .hero__title {
-  margin: 12px auto 0;
+  margin: 32px auto 0; /* у Bebas высокие диакритики (Й), даём воздух от имени */
   max-width: 13em;
   font-family: var(--display);
   font-weight: 400;
@@ -454,3 +454,7 @@ ul, ol { list-style: none; }
   .carousel__track { grid-auto-columns: calc((100% - var(--gap)) / 2.2); }
   .slide--wide .card { min-height: 0; }
 }
+
+/* Логотип в меню. Для тёмной темы отдельный файл с белыми буквами (через <picture>) */
+.nav__logo { display: block; line-height: 0; }
+.nav__logo img { height: 28px; width: auto; }
