@@ -359,3 +359,28 @@ ul, ol { list-style: none; }
   .terms { grid-template-columns: minmax(0, 1fr); }
   .terms li + li { border-left: 0; border-top: 1px solid var(--line); }
 }
+
+/* Галерея, где три узкие афиши остаются в ряд и на телефоне; диплом во всю ширину */
+.card--full { grid-column: 1 / -1; aspect-ratio: 21 / 9; }
+.card--full.card--print img { padding: 5%; }
+
+/* Отзывы */
+.reviews { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+.review {
+  display: flex; flex-direction: column; justify-content: space-between; gap: 24px;
+  background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: clamp(26px, 3vw, 40px);
+}
+.review blockquote { font-size: clamp(19px, 1.9vw, 23px); line-height: 1.4; font-weight: 500; letter-spacing: -0.015em; }
+.review__who { font-size: 15px; color: var(--muted); }
+.review__who span { margin-left: 8px; opacity: 0.7; }
+
+@media (max-width: 860px) {
+  .reviews { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  .gallery--keep3 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .gallery--keep3 .card { border-radius: 12px; }
+  .gallery--keep3 .card--print img { padding: 6%; }
+  .card--full { aspect-ratio: 16 / 10; }
+}

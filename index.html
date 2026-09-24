@@ -13,9 +13,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
   <script>document.documentElement.classList.add('js')</script>
-  <script src="main.js?v=3" defer></script>
+  <script src="main.js?v=4" defer></script>
 </head>
 <body>
   <a class="skip" href="#work">К работам</a>
@@ -27,6 +27,7 @@
       <nav aria-label="Основное меню">
         <ul class="nav__links">
           <li><a href="#work">Работы</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
           <li><a href="#about">Обо мне</a></li>
           <li><a href="#process">Как работаю</a></li>
           <li><a href="#contact">Контакты</a></li>
@@ -82,6 +83,23 @@
       <article class="project" data-reveal>
         <header class="project__head">
           <div>
+            <h3 class="project__title">КЭП</h3>
+            <p class="project__tags">Логотип, фирменный стиль</p>
+          </div>
+          <p class="project__desc">Логотип и фирменный стиль для компании «Комплексное экологическое проектирование». В знаке красная папка с документами и зелёные горы. Носители: папки, визитки, бланк, флешки, экран планшета.</p>
+        </header>
+        <div class="gallery">
+          <a class="card card--wide" href="images/kep-stationery.jpg"><img src="images/kep-stationery.jpg" alt="Фирменный стиль КЭП: чёрная папка, бланк, визитки и ручка на зелёном фоне" loading="lazy"></a>
+          <a class="card card--fit" href="images/kep-logo.jpg"><img src="images/kep-logo.jpg" alt="Логотип КЭП: красная папка с документами и зелёные горы" loading="lazy"></a>
+          <a class="card" href="images/kep-folders.jpg"><img src="images/kep-folders.jpg" alt="Белая папка КЭП с логотипом на красном фоне" loading="lazy"></a>
+          <a class="card" href="images/kep-ipad.jpg"><img src="images/kep-ipad.jpg" alt="Логотип КЭП на экране планшета" loading="lazy"></a>
+          <a class="card" href="images/kep-usb.jpg"><img src="images/kep-usb.jpg" alt="Флешка с цветным знаком КЭП" loading="lazy"></a>
+        </div>
+      </article>
+
+      <article class="project" data-reveal>
+        <header class="project__head">
+          <div>
             <h3 class="project__title">Candle Elite</h3>
             <p class="project__tags">Логотип, упаковка</p>
           </div>
@@ -106,6 +124,22 @@
           <a class="card" href="images/id-tags.jpg"><img src="images/id-tags.jpg" alt="Бирки для украшений iD Identification" loading="lazy"></a>
           <a class="card" href="images/id-plaque.jpg"><img src="images/id-plaque.jpg" alt="Стеклянная табличка iD Identification, украшения о тебе" loading="lazy"></a>
           <a class="card m-wide" href="images/id-cards.jpg"><img src="images/id-cards.jpg" alt="Визитки Classic Style и iD с QR-кодами" loading="lazy"></a>
+        </div>
+      </article>
+
+      <article class="project" data-reveal>
+        <header class="project__head">
+          <div>
+            <h3 class="project__title">Битва спикеров</h3>
+            <p class="project__tags">Соцсети, полиграфия</p>
+          </div>
+          <p class="project__desc">Афиши для сторис и диплом победителя для деловой игры «Битва спикеров». Чёрно-белые портреты участниц и один яркий розовый.</p>
+        </header>
+        <div class="gallery gallery--keep3">
+          <a class="card card--print" href="images/battle-halo.jpg"><img src="images/battle-halo.jpg" alt="Афиша Битва спикеров: портрет с розовым кругом и надписью по кругу" loading="lazy"></a>
+          <a class="card card--print" href="images/battle-list.jpg"><img src="images/battle-list.jpg" alt="Афиша Битва спикеров со списком участниц" loading="lazy"></a>
+          <a class="card card--print" href="images/battle-million.jpg"><img src="images/battle-million.jpg" alt="Афиша Битва спикеров: как прийти к большим деньгам" loading="lazy"></a>
+          <a class="card card--print card--full" href="images/battle-diploma.jpg"><img src="images/battle-diploma.jpg" alt="Диплом победителя Битвы спикеров, чёрный с розовым" loading="lazy"></a>
         </div>
       </article>
 
@@ -171,6 +205,29 @@
           <a class="card card--print m-wide" href="images/cert-massage.jpg"><img src="images/cert-massage.jpg" alt="Подарочный сертификат Виктория Юнг, релакс-массаж" loading="lazy"></a>
         </div>
       </article>
+    </section>
+
+    <!-- ОТЗЫВЫ (цитаты из переписок, орфография поправлена) -->
+    <section class="section wrap" id="reviews">
+      <h2 class="section__title">Отзывы</h2>
+      <ul class="reviews" data-reveal>
+        <li class="review">
+          <blockquote>«Твои макеты просто сразу в душу! Самый прикол, что у меня были и другие дизайнеры, но интуитивно выбрала тебя. И просто в восторге»</blockquote>
+          <p class="review__who">Стеша <span>2023</span></p>
+        </li>
+        <li class="review">
+          <blockquote>«Вау! Слушай, круто! Ты меня прям поняла, мне нравится всё. Обожаю людей, которые считывают меня и делают, так скажем, с первого дубля»</blockquote>
+          <p class="review__who">Надин, организатор «Битвы спикеров» <span>2023</span></p>
+        </li>
+        <li class="review">
+          <blockquote>«Анастасия, нам всё нравится, спасибо! Готовы с вами снова поработать, теперь над каталогом»</blockquote>
+          <p class="review__who">Юля <span>2023, 2024</span></p>
+        </li>
+        <li class="review">
+          <blockquote>«У меня такое крутое лого получилось, особенно по сравнению с первыми, которые мы выбрали. Хороший фирменный стиль получился, мне нравится»</blockquote>
+          <p class="review__who">Вика <span>2024</span></p>
+        </li>
+      </ul>
     </section>
 
     <!-- ОБО МНЕ -->
