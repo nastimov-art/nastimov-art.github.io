@@ -182,6 +182,8 @@ ul, ol { list-style: none; }
   gap: var(--gap);
 }
 .gallery--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.gallery--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.gallery--2 .card { aspect-ratio: 3 / 2; }
 
 .card {
   position: relative;
@@ -334,6 +336,7 @@ ul, ol { list-style: none; }
   body { font-size: 16px; }
   .nav__links { display: none; } /* на телефоне хватает имени и кнопки «Написать» */
   .gallery, .gallery--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .gallery--2 { grid-template-columns: minmax(0, 1fr); }
   .card { border-radius: 16px; }
   .card--wide, .m-wide { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
   .tiles, .steps { grid-template-columns: minmax(0, 1fr); }
