@@ -10,9 +10,8 @@
 
 ## Где что менять
 - Тексты, контакты: index.html
-- Проекты: index.html, один <article class="project"> = один проект, картинки внутри <div class="gallery">.
-  Карточка: <a class="card" href="images/x.jpg"><img src="images/x.jpg" alt="…"></a>
-  card--wide (две колонки), card--fit (макет целиком на белом), card--print (полиграфия на сером), m-wide (на телефоне во всю ширину).
-  В каждом ряду из 3 колонок нужна хотя бы одна обычная карточка.
+- Работы: index.html, раздел «РАБОТЫ». Одно направление = <article class="cat">, внутри лента <figure class="slide">.
+  Слайд: <figure class="slide"><a class="card" href="images/x.jpg"><img src="images/x.jpg" alt="…"></a><figcaption>Подпись</figcaption></figure>
+  slide--wide (горизонтальный, в две ширины), card--fit (макет на белом), card--print (полиграфия на сером).
 - Новая картинка: jpg до ~1800px по длинной стороне в images/.
 - Цвета, шрифты, скругления, тени: переменные в начале styles.css

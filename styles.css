@@ -384,3 +384,73 @@ ul, ol { list-style: none; }
   .gallery--keep3 .card--print img { padding: 6%; }
   .card--full { aspect-ratio: 16 / 10; }
 }
+
+/* Направления работ */
+.cat + .cat { margin-top: clamp(80px, 10vw, 128px); }
+.cat__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  gap: 16px var(--gap);
+  margin-bottom: clamp(20px, 2.6vw, 32px);
+}
+.cat__title {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 4.4vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+}
+.cat__desc { color: var(--muted); max-width: 56ch; }
+.cat__steps { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
+.cat__steps li {
+  padding: 6px 14px;
+  border-radius: 980px;
+  background: var(--card);
+  box-shadow: inset 0 0 0 1px var(--line);
+  font-size: 14px;
+}
+.cat__projects { margin-top: 14px; font-size: 14px; color: var(--muted); }
+
+/* Карусель: лента карточек 3:4, горизонтальные в две ширины, листается свайпом или стрелками */
+.carousel__track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 3 * var(--gap)) / 3.35); /* край следующей карточки подсказывает, что лента листается */
+  gap: var(--gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  padding: 6px 2px 20px; /* место под тень карточек */
+  margin: -6px -2px 0;
+}
+.carousel__track::-webkit-scrollbar { display: none; }
+.slide { display: flex; flex-direction: column; gap: 10px; scroll-snap-align: start; min-width: 0; }
+.slide--wide { grid-column: span 2; }
+.slide .card { aspect-ratio: 3 / 4; }
+.slide--wide .card { aspect-ratio: auto; flex: 1; }
+.slide figcaption { font-size: 14px; color: var(--muted); padding-inline: 4px; }
+
+.carousel__nav { display: flex; justify-content: flex-end; gap: 10px; }
+.carousel__btn {
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 0; cursor: pointer;
+  background: rgb(0 0 0 / 0.07); color: var(--ink);
+  font-size: 24px; line-height: 1; padding-bottom: 3px;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+.carousel__btn:hover { background: rgb(0 0 0 / 0.12); }
+.carousel__btn:disabled { opacity: 0.35; cursor: default; }
+.carousel__nav[hidden] { display: none; }
+@media (prefers-color-scheme: dark) {
+  .carousel__btn { background: rgb(255 255 255 / 0.1); }
+  .carousel__btn:hover { background: rgb(255 255 255 / 0.16); }
+}
+
+@media (max-width: 860px) {
+  .cat__head { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  .carousel__track { grid-auto-columns: calc((100% - var(--gap)) / 2.2); }
+  .slide--wide .card { min-height: 0; }
+}

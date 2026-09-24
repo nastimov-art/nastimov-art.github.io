@@ -13,9 +13,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
   <script>document.documentElement.classList.add('js')</script>
-  <script src="main.js?v=4" defer></script>
+  <script src="main.js?v=5" defer></script>
 </head>
 <body>
   <a class="skip" href="#work">К работам</a>
@@ -50,159 +50,140 @@
       </div>
     </section>
 
-    <!-- РАБОТЫ
-         Один <article class="project"> = один проект.
-         Карточка: <a class="card" href="большая картинка"><img src="…"></a>
-         Модификаторы карточки:
-           card--wide  широкая, на две колонки (для горизонтальных фото)
-           card--fit   картинка целиком на белом фоне (для макетов)
-           card--print картинка целиком на сером фоне с тенью (для полиграфии)
-           m-wide      на телефоне растягивается на всю ширину
-         В каждом ряду из 3 колонок должна быть хотя бы одна обычная карточка. -->
+    <!-- РАБОТЫ по направлениям
+         Одно направление = <article class="cat">, внутри лента-карусель из <figure class="slide">.
+         Слайд: slide--wide (горизонтальный, в две ширины). Карточка: card--fit (макет на белом), card--print (на сером с тенью).
+         Подпись под картинкой: <figcaption>. -->
     <section class="section wrap" id="work">
       <h2 class="section__title">Работы</h2>
 
-      <article class="project" data-reveal>
-        <header class="project__head">
-          <div>
-            <h3 class="project__title">Витрины и фасады</h3>
-            <p class="project__tags">Дизайн витрин и наружной рекламы</p>
+      <article class="cat" data-reveal>
+        <header class="cat__head">
+          <h3 class="cat__title">Витрины и фасады</h3>
+          <div class="cat__text">
+            <p class="cat__desc">Оформляю окна, двери и фасады магазинов. Делаю макет и сразу примеряю его на фото вашего здания, чтобы было видно, как это будет смотреться с улицы. Печать и монтаж на стороне заказчика, я делаю только дизайн.</p>
+            <ul class="cat__steps"><li>Фото фасада и размеры</li><li>Макет</li><li>Визуализация на здании</li><li>Файлы для печати</li></ul>
+            <p class="cat__projects">Проекты: сеть продуктовых магазинов</p>
           </div>
-          <p class="project__desc">Дизайн окон, дверей и фасадов для сети продуктовых магазинов. Простые иконки, крупный текст и яркий цвет, чтобы магазин читался с другой стороны улицы.</p>
         </header>
-        <div class="gallery">
-          <a class="card card--wide" href="images/vitrina-osen.jpg"><img src="images/vitrina-osen.jpg" alt="Визуализация трёх баннеров на фасаде продуктового магазина: всё к столу, свежее мясо, пекарня" loading="lazy"></a>
-          <a class="card" href="images/vitrina-door.jpg"><img src="images/vitrina-door.jpg" alt="Оклейка входной группы ГурМаркетЕда 24/7" loading="lazy"></a>
-          <a class="card" href="images/vitrina-bakery.jpg"><img src="images/vitrina-bakery.jpg" alt="Оформление пекарни ГурМаркетЕда на фасаде" loading="lazy"></a>
-          <a class="card card--wide" href="images/vitrina-gurmarket-night.jpg"><img src="images/vitrina-gurmarket-night.jpg" alt="Вечерние витрины ГурМаркетЕда с фото и иконками продуктов" loading="lazy"></a>
-          <a class="card m-wide" href="images/vitrina-arches.jpg"><img src="images/vitrina-arches.jpg" alt="Арочные окна с плакатами и кофейней самообслуживания" loading="lazy"></a>
-          <a class="card card--wide" href="images/vitrina-9ka.jpg"><img src="images/vitrina-9ka.jpg" alt="Визуализация оформления окон на фасаде продуктового магазина" loading="lazy"></a>
+        <div class="carousel">
+          <div class="carousel__track">
+          <figure class="slide slide--wide"><a class="card" href="images/vitrina-osen.jpg"><img src="images/vitrina-osen.jpg" alt="Визуализация трёх баннеров на фасаде продуктового магазина" loading="lazy"></a><figcaption>Баннеры на фасаде</figcaption></figure>
+          <figure class="slide"><a class="card" href="images/vitrina-door.jpg"><img src="images/vitrina-door.jpg" alt="Оклейка входной группы магазина 24/7" loading="lazy"></a><figcaption>Входная группа</figcaption></figure>
+          <figure class="slide"><a class="card" href="images/vitrina-bakery.jpg"><img src="images/vitrina-bakery.jpg" alt="Оформление пекарни на фасаде" loading="lazy"></a><figcaption>Пекарня</figcaption></figure>
+          <figure class="slide slide--wide"><a class="card" href="images/vitrina-gurmarket-night.jpg"><img src="images/vitrina-gurmarket-night.jpg" alt="Вечерние витрины с фото и иконками продуктов" loading="lazy"></a><figcaption>Витрины вечером</figcaption></figure>
+          <figure class="slide slide--wide"><a class="card" href="images/vitrina-9ka.jpg"><img src="images/vitrina-9ka.jpg" alt="Визуализация оформления окон на фасаде продуктового магазина" loading="lazy"></a><figcaption>Окна у входа</figcaption></figure>
+          <figure class="slide slide--wide"><a class="card" href="images/vitrina-arches.jpg"><img src="images/vitrina-arches.jpg" alt="Арочные окна с плакатами и кофейней самообслуживания" loading="lazy"></a><figcaption>Арочные окна</figcaption></figure>
+          </div>
+          <div class="carousel__nav">
+            <button class="carousel__btn" type="button" data-dir="-1" aria-label="Назад">‹</button>
+            <button class="carousel__btn" type="button" data-dir="1" aria-label="Вперёд">›</button>
+          </div>
         </div>
       </article>
 
-      <article class="project" data-reveal>
-        <header class="project__head">
-          <div>
-            <h3 class="project__title">КЭП</h3>
-            <p class="project__tags">Логотип, фирменный стиль</p>
+      <article class="cat" data-reveal>
+        <header class="cat__head">
+          <h3 class="cat__title">Логотип и фирменный стиль</h3>
+          <div class="cat__text">
+            <p class="cat__desc">Начинаю с разговора о бизнесе и о том, кто ваш клиент. Потом показываю несколько вариантов знака, выбранный довожу и собираю вокруг него стиль: цвета, шрифты, носители. На выходе логотип во всех форматах и готовые макеты визиток, бирок, упаковки.</p>
+            <ul class="cat__steps"><li>Бриф</li><li>Варианты знака</li><li>Фирменный стиль</li><li>Носители и упаковка</li></ul>
+            <p class="cat__projects">Проекты: КЭП, Candle Elite, украшения iD и лэшмейкер Classic Style</p>
           </div>
-          <p class="project__desc">Логотип и фирменный стиль для компании «Комплексное экологическое проектирование». В знаке красная папка с документами и зелёные горы. Носители: папки, визитки, бланк, флешки, экран планшета.</p>
         </header>
-        <div class="gallery">
-          <a class="card card--wide" href="images/kep-stationery.jpg"><img src="images/kep-stationery.jpg" alt="Фирменный стиль КЭП: чёрная папка, бланк, визитки и ручка на зелёном фоне" loading="lazy"></a>
-          <a class="card card--fit" href="images/kep-logo.jpg"><img src="images/kep-logo.jpg" alt="Логотип КЭП: красная папка с документами и зелёные горы" loading="lazy"></a>
-          <a class="card" href="images/kep-folders.jpg"><img src="images/kep-folders.jpg" alt="Белая папка КЭП с логотипом на красном фоне" loading="lazy"></a>
-          <a class="card" href="images/kep-ipad.jpg"><img src="images/kep-ipad.jpg" alt="Логотип КЭП на экране планшета" loading="lazy"></a>
-          <a class="card" href="images/kep-usb.jpg"><img src="images/kep-usb.jpg" alt="Флешка с цветным знаком КЭП" loading="lazy"></a>
+        <div class="carousel">
+          <div class="carousel__track">
+          <figure class="slide slide--wide"><a class="card" href="images/kep-stationery.jpg"><img src="images/kep-stationery.jpg" alt="Фирменный стиль КЭП: папка, бланк, визитки и ручка" loading="lazy"></a><figcaption>КЭП, фирменный стиль</figcaption></figure>
+          <figure class="slide"><a class="card card--fit" href="images/kep-logo.jpg"><img src="images/kep-logo.jpg" alt="Логотип КЭП: красная папка с документами и зелёные горы" loading="lazy"></a><figcaption>КЭП, логотип</figcaption></figure>
+          <figure class="slide"><a class="card" href="images/kep-folders.jpg"><img src="images/kep-folders.jpg" alt="Белая папка КЭП с логотипом" loading="lazy"></a><figcaption>КЭП, папки</figcaption></figure>
+          <figure class="slide"><a class="card" href="images/kep-usb.jpg"><img src="images/kep-usb.jpg" alt="Флешка с цветным знаком КЭП" loading="lazy"></a><figcaption>КЭП, флешки</figcaption></figure>
+          <figure class="slide"><a class="card" href="images/candle-box.jpg"><img src="images/candle-box.jpg" alt="Белая коробка Candle Elite с логотипом" loading="lazy"></a><figcaption>Candle Elite, коробка</figcaption></figure>
+          <figure class="slide"><a class="card" href="images/candle-jar.jpg"><img src="images/candle-jar.jpg" alt="Банка свечи с логотипом Candle Elite" loading="lazy"></a><figcaption>Candle Elite, этикетка</figcaption></figure>
+          <figure class="slide"><a class="card" href="images/candle-flat.jpg"><img src="images/candle-flat.jpg" alt="Плоская коробка с волнистым узором и логотипом Candle" loading="lazy"></a><figcaption>Candle Elite, подарочная коробка</figcaption></figure>
+          <figure class="slide"><a class="card" href="images/id-tags.jpg"><img src="images/id-tags.jpg" alt="Бирки для украшений iD Identification" loading="lazy"></a><figcaption>iD, бирки</figcaption></figure>
+          <figure class="slide"><a class="card" href="images/id-plaque.jpg"><img src="images/id-plaque.jpg" alt="Стеклянная табличка iD Identification" loading="lazy"></a><figcaption>iD, табличка</figcaption></figure>
+          <figure class="slide slide--wide"><a class="card" href="images/id-cards.jpg"><img src="images/id-cards.jpg" alt="Визитки Classic Style и iD с QR-кодами" loading="lazy"></a><figcaption>Classic Style и iD, визитки</figcaption></figure>
+          </div>
+          <div class="carousel__nav">
+            <button class="carousel__btn" type="button" data-dir="-1" aria-label="Назад">‹</button>
+            <button class="carousel__btn" type="button" data-dir="1" aria-label="Вперёд">›</button>
+          </div>
         </div>
       </article>
 
-      <article class="project" data-reveal>
-        <header class="project__head">
-          <div>
-            <h3 class="project__title">Candle Elite</h3>
-            <p class="project__tags">Логотип, упаковка</p>
+      <article class="cat" data-reveal>
+        <header class="cat__head">
+          <h3 class="cat__title">Персонажи и мерч</h3>
+          <div class="cat__text">
+            <p class="cat__desc">Придумываю персонажа или принт и рисую макет, по которому производство шьёт игрушку. Такие вещи дарят клиентам и продают как мерч: ребёнок уносит кубик домой, а вместе с ним и ваш QR-код.</p>
+            <ul class="cat__steps"><li>Идея и эскиз</li><li>Макет</li><li>Файлы для производства</li><li>Готовая игрушка</li></ul>
+            <p class="cat__projects">Проекты: львы-талисманы Boxing Star и Greefon, подушка-лошадь, кубики Vanana Park</p>
           </div>
-          <p class="project__desc">Логотип и упаковка для свечей из кокосового воска. Разрезанные буквы в логотипе и чёрно-белая упаковка без лишнего: коробка, подарочная крышка, этикетка на банку.</p>
         </header>
-        <div class="gallery">
-          <a class="card" href="images/candle-box.jpg"><img src="images/candle-box.jpg" alt="Белая коробка Candle Elite с логотипом" loading="lazy"></a>
-          <a class="card" href="images/candle-jar.jpg"><img src="images/candle-jar.jpg" alt="Банка свечи с логотипом Candle Elite в руке" loading="lazy"></a>
-          <a class="card m-wide" href="images/candle-flat.jpg"><img src="images/candle-flat.jpg" alt="Плоская коробка с волнистым линейным узором и логотипом Candle" loading="lazy"></a>
+        <div class="carousel">
+          <div class="carousel__track">
+          <figure class="slide"><a class="card" href="images/toy-lions.jpg"><img src="images/toy-lions.jpg" alt="Две готовые игрушки-льва на диване с геймпадами" loading="lazy"></a><figcaption>Львы, готовые игрушки</figcaption></figure>
+          <figure class="slide"><a class="card card--fit" href="images/toy-lion-boxing.jpg"><img src="images/toy-lion-boxing.jpg" alt="Макет льва-талисмана Boxing Star" loading="lazy"></a><figcaption>Boxing Star, макет</figcaption></figure>
+          <figure class="slide"><a class="card card--fit" href="images/toy-lion-greefon.jpg"><img src="images/toy-lion-greefon.jpg" alt="Макет льва-талисмана Greefon" loading="lazy"></a><figcaption>Greefon, макет</figcaption></figure>
+          <figure class="slide slide--wide"><a class="card card--fit" href="images/toy-horse-layout.jpg"><img src="images/toy-horse-layout.jpg" alt="Макет подушки-лошади" loading="lazy"></a><figcaption>Подушка-лошадь, макет</figcaption></figure>
+          <figure class="slide"><a class="card" href="images/toy-horse.jpg"><img src="images/toy-horse.jpg" alt="Готовая подушка-лошадь с гривой" loading="lazy"></a><figcaption>Подушка-лошадь</figcaption></figure>
+          <figure class="slide slide--wide"><a class="card" href="images/vanana-cubes.jpg"><img src="images/vanana-cubes.jpg" alt="Два мягких кубика Vanana Park с QR-кодами" loading="lazy"></a><figcaption>Vanana Park, кубики</figcaption></figure>
+          <figure class="slide slide--wide"><a class="card card--fit" href="images/vanana-layout.jpg"><img src="images/vanana-layout.jpg" alt="Шесть граней кубика с QR-кодами и фразами" loading="lazy"></a><figcaption>Vanana Park, грани</figcaption></figure>
+          </div>
+          <div class="carousel__nav">
+            <button class="carousel__btn" type="button" data-dir="-1" aria-label="Назад">‹</button>
+            <button class="carousel__btn" type="button" data-dir="1" aria-label="Вперёд">›</button>
+          </div>
         </div>
       </article>
 
-      <article class="project" data-reveal>
-        <header class="project__head">
-          <div>
-            <h3 class="project__title">iD и Classic Style</h3>
-            <p class="project__tags">Логотип, фирменный стиль</p>
+      <article class="cat" data-reveal>
+        <header class="cat__head">
+          <h3 class="cat__title">Соцсети и баннеры</h3>
+          <div class="cat__text">
+            <p class="cat__desc">Посты, сторис, афиши мероприятий и баннеры для соцсетей и сайтов. Держу всю серию в одном стиле, чтобы акцию узнавали с первого взгляда.</p>
+            <ul class="cat__steps"><li>Идея серии</li><li>Первый пост</li><li>Остальные по образцу</li><li>Размеры под площадки</li></ul>
+            <p class="cat__projects">Проекты: NOT ALONe, Битва спикеров</p>
           </div>
-          <p class="project__desc">Два бренда одного мастера: украшения iD и лэшмейкер Classic Style. Логотипы, бирки, визитки и табличка на вход.</p>
         </header>
-        <div class="gallery">
-          <a class="card" href="images/id-tags.jpg"><img src="images/id-tags.jpg" alt="Бирки для украшений iD Identification" loading="lazy"></a>
-          <a class="card" href="images/id-plaque.jpg"><img src="images/id-plaque.jpg" alt="Стеклянная табличка iD Identification, украшения о тебе" loading="lazy"></a>
-          <a class="card m-wide" href="images/id-cards.jpg"><img src="images/id-cards.jpg" alt="Визитки Classic Style и iD с QR-кодами" loading="lazy"></a>
+        <div class="carousel">
+          <div class="carousel__track">
+          <figure class="slide"><a class="card card--print" href="images/notalone-poster.jpg"><img src="images/notalone-poster.jpg" alt="Афиша NOT ALONe, клиентские дни" loading="lazy"></a><figcaption>NOT ALONe, афиша</figcaption></figure>
+          <figure class="slide"><a class="card card--print" href="images/notalone-raffle.jpg"><img src="images/notalone-raffle.jpg" alt="Пост NOT ALONe: беспроигрышная лотерея и бьюти-сейф" loading="lazy"></a><figcaption>NOT ALONe, розыгрыши</figcaption></figure>
+          <figure class="slide"><a class="card card--print" href="images/notalone-party.jpg"><img src="images/notalone-party.jpg" alt="Пост NOT ALONe: глинтвейн, фотозона и подарки" loading="lazy"></a><figcaption>NOT ALONe, праздник</figcaption></figure>
+          <figure class="slide"><a class="card card--print" href="images/battle-halo.jpg"><img src="images/battle-halo.jpg" alt="Сторис Битва спикеров: портрет с розовым кругом" loading="lazy"></a><figcaption>Битва спикеров, сторис</figcaption></figure>
+          <figure class="slide"><a class="card card--print" href="images/battle-list.jpg"><img src="images/battle-list.jpg" alt="Сторис Битва спикеров со списком участниц" loading="lazy"></a><figcaption>Битва спикеров, сторис</figcaption></figure>
+          <figure class="slide"><a class="card card--print" href="images/battle-million.jpg"><img src="images/battle-million.jpg" alt="Сторис Битва спикеров: как прийти к большим деньгам" loading="lazy"></a><figcaption>Битва спикеров, сторис</figcaption></figure>
+          </div>
+          <div class="carousel__nav">
+            <button class="carousel__btn" type="button" data-dir="-1" aria-label="Назад">‹</button>
+            <button class="carousel__btn" type="button" data-dir="1" aria-label="Вперёд">›</button>
+          </div>
         </div>
       </article>
 
-      <article class="project" data-reveal>
-        <header class="project__head">
-          <div>
-            <h3 class="project__title">Битва спикеров</h3>
-            <p class="project__tags">Соцсети, полиграфия</p>
+      <article class="cat" data-reveal>
+        <header class="cat__head">
+          <h3 class="cat__title">Полиграфия</h3>
+          <div class="cat__text">
+            <p class="cat__desc">Листовки, сертификаты, дипломы и дневники для акций. Готовлю файлы сразу под типографию, чтобы при печати ничего не съехало.</p>
+            <ul class="cat__steps"><li>Текст и задача</li><li>Макет</li><li>Правки</li><li>Файлы для типографии</li></ul>
+            <p class="cat__projects">Проекты: NOT ALONe, Бьюти-отличница, Битва спикеров, подарочные сертификаты</p>
           </div>
-          <p class="project__desc">Афиши для сторис и диплом победителя для деловой игры «Битва спикеров». Чёрно-белые портреты участниц и один яркий розовый.</p>
         </header>
-        <div class="gallery gallery--keep3">
-          <a class="card card--print" href="images/battle-halo.jpg"><img src="images/battle-halo.jpg" alt="Афиша Битва спикеров: портрет с розовым кругом и надписью по кругу" loading="lazy"></a>
-          <a class="card card--print" href="images/battle-list.jpg"><img src="images/battle-list.jpg" alt="Афиша Битва спикеров со списком участниц" loading="lazy"></a>
-          <a class="card card--print" href="images/battle-million.jpg"><img src="images/battle-million.jpg" alt="Афиша Битва спикеров: как прийти к большим деньгам" loading="lazy"></a>
-          <a class="card card--print card--full" href="images/battle-diploma.jpg"><img src="images/battle-diploma.jpg" alt="Диплом победителя Битвы спикеров, чёрный с розовым" loading="lazy"></a>
-        </div>
-      </article>
-
-      <article class="project" data-reveal>
-        <header class="project__head">
-          <div>
-            <h3 class="project__title">Персонажи и игрушки</h3>
-            <p class="project__tags">Персонаж, мерч</p>
+        <div class="carousel">
+          <div class="carousel__track">
+          <figure class="slide"><a class="card card--print" href="images/notalone-flyer.jpg"><img src="images/notalone-flyer.jpg" alt="Листовка NOT ALONe с QR-кодом и салонами-участниками" loading="lazy"></a><figcaption>NOT ALONe, листовка</figcaption></figure>
+          <figure class="slide"><a class="card card--print" href="images/beauty-flyer.jpg"><img src="images/beauty-flyer.jpg" alt="Листовка лотереи Бьюти-отличница" loading="lazy"></a><figcaption>Бьюти-отличница, листовка</figcaption></figure>
+          <figure class="slide slide--wide"><a class="card card--print" href="images/beauty-diary-cover.jpg"><img src="images/beauty-diary-cover.jpg" alt="Обложка дневника бьюти-отличницы" loading="lazy"></a><figcaption>Бьюти-отличница, дневник</figcaption></figure>
+          <figure class="slide slide--wide"><a class="card card--print" href="images/beauty-diary-inside.jpg"><img src="images/beauty-diary-inside.jpg" alt="Разворот дневника с таблицами процедур" loading="lazy"></a><figcaption>Бьюти-отличница, разворот</figcaption></figure>
+          <figure class="slide slide--wide"><a class="card card--print" href="images/battle-diploma.jpg"><img src="images/battle-diploma.jpg" alt="Диплом победителя Битвы спикеров" loading="lazy"></a><figcaption>Битва спикеров, диплом</figcaption></figure>
+          <figure class="slide"><a class="card card--print" href="images/cert-massage.jpg"><img src="images/cert-massage.jpg" alt="Подарочный сертификат Виктория Юнг, релакс-массаж" loading="lazy"></a><figcaption>Подарочный сертификат</figcaption></figure>
           </div>
-          <p class="project__desc">Дорожная подушка-лошадь и львы-талисманы для спортивных клубов Boxing Star и Greefon: один персонаж в двух формах. Я рисую персонажа и готовлю макет, по нему производство шьёт игрушку.</p>
-        </header>
-        <div class="gallery">
-          <a class="card card--wide card--fit" href="images/toy-horse-layout.jpg"><img src="images/toy-horse-layout.jpg" alt="Макет подушки-лошади" loading="lazy"></a>
-          <a class="card" href="images/toy-horse.jpg"><img src="images/toy-horse.jpg" alt="Готовая подушка-лошадь с гривой" loading="lazy"></a>
-          <a class="card card--fit" href="images/toy-lion-boxing.jpg"><img src="images/toy-lion-boxing.jpg" alt="Макет льва-талисмана Boxing Star в боксёрских перчатках" loading="lazy"></a>
-          <a class="card card--fit" href="images/toy-lion-greefon.jpg"><img src="images/toy-lion-greefon.jpg" alt="Макет льва-талисмана Greefon в кимоно" loading="lazy"></a>
-          <a class="card" href="images/toy-lions.jpg"><img src="images/toy-lions.jpg" alt="Две готовые игрушки-льва на диване с геймпадами" loading="lazy"></a>
-        </div>
-      </article>
-
-      <article class="project" data-reveal>
-        <header class="project__head">
-          <div>
-            <h3 class="project__title">Vanana Park</h3>
-            <p class="project__tags">Мерч</p>
+          <div class="carousel__nav">
+            <button class="carousel__btn" type="button" data-dir="-1" aria-label="Назад">‹</button>
+            <button class="carousel__btn" type="button" data-dir="1" aria-label="Вперёд">›</button>
           </div>
-          <p class="project__desc">Мягкие QR-кубики для центра развлечений: на каждой грани свой QR-код и своя фраза. Я сделала дизайн граней, кубики сшило производство.</p>
-        </header>
-        <div class="gallery gallery--2">
-          <a class="card" href="images/vanana-cubes.jpg"><img src="images/vanana-cubes.jpg" alt="Два готовых мягких кубика Vanana Park с QR-кодами" loading="lazy"></a>
-          <a class="card card--fit" href="images/vanana-layout.jpg"><img src="images/vanana-layout.jpg" alt="Шесть граней кубика: полосы, звёзды и QR-коды с фразами" loading="lazy"></a>
-        </div>
-      </article>
-
-      <article class="project" data-reveal>
-        <header class="project__head">
-          <div>
-            <h3 class="project__title">NOT ALONe</h3>
-            <p class="project__tags">Рекламная кампания, соцсети, полиграфия</p>
-          </div>
-          <p class="project__desc">Серия афиш и постов для совместной предновогодней акции салонов красоты в стиле «Один дома»: клиентские дни, розыгрыши, подарки гостям. В кадре настоящие мастера салона.</p>
-        </header>
-        <div class="gallery gallery--4">
-          <a class="card card--print" href="images/notalone-poster.jpg"><img src="images/notalone-poster.jpg" alt="Афиша NOT ALONe, клиентские дни в Мастер-Шугастер" loading="lazy"></a>
-          <a class="card card--print" href="images/notalone-raffle.jpg"><img src="images/notalone-raffle.jpg" alt="Пост NOT ALONe: беспроигрышная лотерея и бьюти-сейф" loading="lazy"></a>
-          <a class="card card--print" href="images/notalone-party.jpg"><img src="images/notalone-party.jpg" alt="Пост NOT ALONe: глинтвейн, фотозона и подарки, мастера салона в красных повязках" loading="lazy"></a>
-          <a class="card card--print" href="images/notalone-flyer.jpg"><img src="images/notalone-flyer.jpg" alt="Листовка NOT ALONe с QR-кодом и салонами-участниками" loading="lazy"></a>
-        </div>
-      </article>
-
-      <article class="project" data-reveal>
-        <header class="project__head">
-          <div>
-            <h3 class="project__title">Бьюти-отличница и сертификаты</h3>
-            <p class="project__tags">Полиграфия</p>
-          </div>
-          <p class="project__desc">Осенняя лотерея для пяти салонов: листовка с QR-кодом и дневник, в котором мастера отмечают пройденные процедуры. Рядом подарочный сертификат для массажиста.</p>
-        </header>
-        <div class="gallery">
-          <a class="card card--print m-wide" href="images/beauty-flyer.jpg"><img src="images/beauty-flyer.jpg" alt="Листовка лотереи Бьюти-отличница с QR-кодом и логотипами салонов" loading="lazy"></a>
-          <a class="card card--wide card--print" href="images/beauty-diary-cover.jpg"><img src="images/beauty-diary-cover.jpg" alt="Обложка дневника бьюти-отличницы с осенними листьями" loading="lazy"></a>
-          <a class="card card--wide card--print" href="images/beauty-diary-inside.jpg"><img src="images/beauty-diary-inside.jpg" alt="Разворот дневника: таблицы процедур по дням для пяти салонов" loading="lazy"></a>
-          <a class="card card--print m-wide" href="images/cert-massage.jpg"><img src="images/cert-massage.jpg" alt="Подарочный сертификат Виктория Юнг, релакс-массаж" loading="lazy"></a>
         </div>
       </article>
     </section>
@@ -217,15 +198,15 @@
         </li>
         <li class="review">
           <blockquote>«Вау! Слушай, круто! Ты меня прям поняла, мне нравится всё. Обожаю людей, которые считывают меня и делают, так скажем, с первого дубля»</blockquote>
-          <p class="review__who">Надин, организатор «Битвы спикеров» <span>2023</span></p>
+          <p class="review__who">Надин, «Битва спикеров» <span>2023</span></p>
         </li>
         <li class="review">
           <blockquote>«Анастасия, нам всё нравится, спасибо! Готовы с вами снова поработать, теперь над каталогом»</blockquote>
-          <p class="review__who">Юля <span>2023, 2024</span></p>
+          <p class="review__who">Юля, игрушки-талисманы <span>2023, 2024</span></p>
         </li>
         <li class="review">
           <blockquote>«У меня такое крутое лого получилось, особенно по сравнению с первыми, которые мы выбрали. Хороший фирменный стиль получился, мне нравится»</blockquote>
-          <p class="review__who">Вика <span>2024</span></p>
+          <p class="review__who">Вика, фирменный стиль КЭП <span>2024</span></p>
         </li>
       </ul>
     </section>
@@ -246,19 +227,6 @@
           <div><dt>Связь</dt><dd><a href="https://t.me/nasti_mov">Telegram @nasti_mov</a><br><a href="https://vk.com/nasti_mov">ВКонтакте nasti_mov</a></dd></div>
         </dl>
       </div>
-    </section>
-
-    <!-- ЧТО ДЕЛАЮ -->
-    <section class="section wrap" id="services">
-      <h2 class="section__title">Что делаю</h2>
-      <ul class="tiles" data-reveal>
-        <li class="tile"><h3>Логотип и фирменный стиль</h3><p>Знак, цвета, шрифты, визитки, бирки.</p></li>
-        <li class="tile"><h3>Витрины и фасады</h3><p>Дизайн витрин, вывесок и баннеров. Показываю, как это будет выглядеть на фото вашего здания. Печать и монтаж не делаю, только дизайн.</p></li>
-        <li class="tile"><h3>Упаковка</h3><p>Дизайн коробок, этикеток и наклеек.</p></li>
-        <li class="tile"><h3>Полиграфия</h3><p>Сертификаты, дипломы, афиши, листовки.</p></li>
-        <li class="tile"><h3>Персонажи и мерч</h3><p>Талисманы и игрушки: рисую персонажа и готовлю макет для производства.</p></li>
-        <li class="tile"><h3>Маркетплейсы</h3><p>Карточки товаров, рич-контент и видеообложки для Ozon, Wildberries и Яндекс Маркета.</p></li>
-      </ul>
     </section>
 
     <!-- КАК РАБОТАЮ -->

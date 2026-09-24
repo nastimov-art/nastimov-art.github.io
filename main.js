@@ -31,4 +31,24 @@ document.addEventListener('click', (e) => {
 });
 lb.addEventListener('click', () => lb.close());
 
+// Карусели: стрелки листают на ширину ленты, на краях гаснут.
+document.querySelectorAll('.carousel').forEach((c) => {
+  const track = c.querySelector('.carousel__track');
+  const nav = c.querySelector('.carousel__nav');
+  const [prev, next] = c.querySelectorAll('.carousel__btn');
+  const update = () => {
+    const max = track.scrollWidth - track.clientWidth;
+    nav.hidden = max <= 2;
+    prev.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft >= max - 2;
+  };
+  nav.addEventListener('click', (e) => {
+    const b = e.target.closest('.carousel__btn');
+    if (b) track.scrollBy({ left: Number(b.dataset.dir) * track.clientWidth * 0.9, behavior: 'smooth' });
+  });
+  track.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+});
+
 document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
